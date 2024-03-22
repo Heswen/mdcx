@@ -67,9 +67,9 @@ def update_emby_actor_info():
             actor_id = actor.get('Id')
 
             # 名字含有空格时跳过
-            if re.search(r'[ .·・-]', actor_name):
-                signal.show_log_text(f"🔍 {i}/{total} {actor_name}: 名字含有空格等分隔符，识别为非女优，跳过！")
-                continue
+            # if re.search(r'[ .·・-]', actor_name):
+            #     signal.show_log_text(f"🔍 {i}/{total} {actor_name}: 名字含有空格等分隔符，识别为非女优，跳过！")
+            #     continue
 
             # 已有资料时跳过
             # http://192.168.5.191:8096/emby/Persons/梦乃爱华?api_key=ee9a2f2419704257b1dd60b975f2d64e
