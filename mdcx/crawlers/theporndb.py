@@ -341,7 +341,7 @@ async def main(
             if title and not hash_data:
                 search_keyword_list, series_ex, date = get_search_keyword(file_path)
                 for search_keyword in search_keyword_list:
-                    url_search = f"https://api.theporndb.net/scenes?parse={search_keyword}&per_page=100"
+                    url_search = f"https://api.theporndb.net/scenes?parse={search_keyword}&per_page=10"
                     debug_info = f"请求地址: {url_search} "
                     LogBuffer.info().write(web_info + debug_info)
                     res_search, error = await manager.computed.async_client.get_json(url_search, headers=headers)
