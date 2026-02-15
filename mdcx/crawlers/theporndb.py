@@ -33,13 +33,15 @@ def read_data(data):
     if not trailer:
         trailer = ""
     try:
-        cover = data["background"]["large"]
+        # cover = data["background"]["large"]
+        cover = data["background"]["full"]
     except Exception:
         cover = data.get("image")
     if not cover:
         cover = ""
     try:
-        poster = data["posters"]["large"]
+        # poster = data["posters"]["large"]
+        poster = data["posters"]["full"]
     except Exception:
         poster = data.get("poster")
     if not poster:
